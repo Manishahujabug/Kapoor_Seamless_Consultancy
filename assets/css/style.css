@@ -1211,11 +1211,13 @@ blockquote p {
     font-size: 16px;
     line-height: 1.6;
     margin-top: 10px;
+    text-align: justify;
 }
 
 .footer-links {
     flex: 1;
-    text-align: center;
+    text-align: left;
+    padding-left: 210px;
 }
 
 .footer-links h4 {
@@ -1234,7 +1236,7 @@ blockquote p {
 }
 
 .footer-links ul li a {
-    color: #333333;
+    color: #444444;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -1245,7 +1247,7 @@ blockquote p {
 
 .footer-contact {
     flex: 1;
-    text-align: right;
+    text-align: justify;
 }
 
 .footer-contact h4 {
