@@ -423,7 +423,7 @@ h6 {
 
 #hero .btn-secondary:hover {
     /* background: #444444; */
-    color: #fffff;
+    color: #ffffff;
     box-shadow: 1px 1px 8px #ffffff;
 }
 
@@ -1270,12 +1270,16 @@ blockquote p {
         text-align: center;
     }
 
+    .footer-links {
+        max-width: 768px;
+        text-align: center;
+        padding-left: 0px;
+    }
     .footer-logo,
-    .footer-links,
     .footer-contact {
         max-width: 100%;
         margin-bottom: 20px;
-    }
+    }    
 
     .footer-contact {
         text-align: center;
