@@ -147,6 +147,7 @@ h6 {
     color: #6a7489;
     white-space: nowrap;
     transition: 0.3s;
+    margin-right: 12px;
 }
 
 .navbar a i,
@@ -395,7 +396,7 @@ h6 {
     transition: 0.3s;
     color: #fff;
     background: #ff712b;
-    box-shadow: 0 8px 28px #ff712b;
+    box-shadow: 5px 8px 28px #ff712b;
     margin-right: 20px; /* Add margin to the right of the button */
 }
 
@@ -409,8 +410,7 @@ h6 {
     border-radius: 40px;
     transition: 0.3s;
     color: #fff;
-    background: #ff712b; /* Example secondary button color */
-    box-shadow: 0 8px 28px #ff712b;
+    border: 2px solid #ff712b;
 }
 
 
@@ -624,6 +624,8 @@ section {
     display: flex;
     justify-content: center;  /* Center horizontally */
     align-items: center;      /* Center vertically */
+    height: 80px;
+    width: 80px;
 }
 .About .description {
     line-height: 24px;
@@ -1005,6 +1007,7 @@ button[type="submit"]:hover {
 
 .modal-content {
     background-color: white;
+    color: #ff712b;
     margin: 15% auto;
     padding: 20px;
     border-radius: 8px;
@@ -1028,7 +1031,7 @@ button[type="submit"]:hover {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: #ff712b;
     text-decoration: none;
     cursor: pointer;
 }
