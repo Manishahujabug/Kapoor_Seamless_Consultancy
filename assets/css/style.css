@@ -974,7 +974,7 @@ button[type="submit"]:hover {
 /* Responsive Styling */
 @media (max-width: 768px) {
     .contact-content {
-        flex-direction: column;
+        /* flex-direction: column; */
         
     }
 
@@ -983,7 +983,7 @@ button[type="submit"]:hover {
     }
 
     .contact-form {
-        max-width: 100%;
+        max-width: 94%;
     }
 
     .get-in-touch p {
