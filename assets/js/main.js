@@ -287,24 +287,27 @@ document.getElementById("strategic").classList.add("active");
 function toggleAccordion(accordionId, buttonElement) {
   var content = document.getElementById(accordionId);
 
-  // Collapse all accordion items
-  var allContents = document.getElementsByClassName('accordion-content');
-  var allButtons = document.getElementsByClassName('accordion-button');
-
-  for (var i = 0; i < allContents.length; i++) {
-      allContents[i].style.display = 'none';
-      allButtons[i].classList.remove('active');
-  }
-
-  // Expand or collapse the clicked accordion item
+  // Check if the clicked section is already open
   if (content.style.display === 'block') {
+      // If it's open, close it
       content.style.display = 'none';
       buttonElement.classList.remove('active');
   } else {
+      // Close all accordion items first
+      var allContents = document.getElementsByClassName('accordion-content');
+      var allButtons = document.getElementsByClassName('accordion-button');
+
+      for (var i = 0; i < allContents.length; i++) {
+          allContents[i].style.display = 'none';
+          allButtons[i].classList.remove('active');
+      }
+
+      // Then, open the clicked accordion item
       content.style.display = 'block';
       buttonElement.classList.add('active');
   }
 }
+
 
 
 

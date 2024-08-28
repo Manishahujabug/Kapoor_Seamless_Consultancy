@@ -810,6 +810,17 @@ section {
     color: #ff712b !important;
 }
 
+.accordion-button.active:hover {
+    background-color: #ff5500 !important; /* Keep the active background color */
+    color: #ffffff !important; /* Keep the active text color */
+    cursor: default; /* Optional: change cursor to default when active */
+}
+
+
+
+
+
+
 
 .accordion-content {
     display: none;
@@ -1186,7 +1197,7 @@ blockquote p {
 .footer-section {
     background-color: #ffffff;
     color: #333333;
-    padding: 50px 20px;
+    padding: 30px 10px;
 }
 
 .footer-section .container {
@@ -1220,6 +1231,7 @@ blockquote p {
     flex: 1;
     text-align: left;
     padding-left: 150px;
+    paddi
 }
 
 .footer-links h4 {
