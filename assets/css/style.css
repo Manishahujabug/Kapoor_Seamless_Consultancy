@@ -903,10 +903,10 @@ button.accordion-button {
 }
 
 .contact-image img {
-    width: 100%;
-    height: auto;
+    width: 86%;
+    height: 10%;
     border-radius: 12px;
-    display: block;
+    /* display: block; */
 }
 
 .contact-form {
@@ -973,10 +973,10 @@ button[type="submit"]:hover {
 
 /* Responsive Styling */
 @media (max-width: 768px) {
-    .contact-content {
-        /* flex-direction: column; */
+    /* .contact-content {
+        flex-direction: column;
         
-    }
+    } */
 
     .contact-image {
         display: none; /* Hide the image on mobile */
@@ -1094,7 +1094,7 @@ button[type="submit"]:hover {
 blockquote {
     background-color: #ffffff;
     color: #000000;
-    padding: 20px;
+    padding: 30px 15px 10px 15px;
     border-radius: 20px;
     font-style: italic;
     position: relative;
@@ -1103,7 +1103,7 @@ blockquote {
 
 blockquote:before {
     content: "“";
-    font-size: 36px;
+    font-size: 56px;
     position: absolute;
     top: -5px;
     left: 10px;
@@ -1250,7 +1250,7 @@ blockquote p {
 
 .footer-contact {
     flex: 1;
-    text-align: justify;
+    text-align: left;
 }
 
 .footer-contact h4 {
@@ -1337,4 +1337,10 @@ blockquote p {
  ::selection {
     color: #ffffff;
     background: #ff712b;
+}
+
+
+
+::placeholder{
+    opacity: 30%;
 }

@@ -61,7 +61,7 @@
     <!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" style="background-image: url(Hero.jpg); " class="d-flex align-items-center">
+    <section id="hero" style="background-image: url(Hero\ 3.jpg); " class="d-flex align-items-center">
 
         <div class="container">
             <div class="row">
@@ -352,42 +352,44 @@
             <p>Whether you have a question about our services, need assistance, or just want to share feedback, we're here to help.<br> Reach out to us using the contact details below, or simply fill out the contact form, and we'll get back to you as soon as possible.</p>
             <div class="contact-content">
                 <div class="contact-image">
-                    <img src="Contact Us Image.jpg" alt="Contact Image">
+                    <img src="Contact Us Image 3.jpg" alt="Contact Image">
                 </div>
                 <div class="contact-form">
                     <h3>Make an Appointment</h3>
-                    <form id="contactForm" action="#" method="post" onsubmit="return validateForm()">
+                    <form id="contactForm" action="#" method="post" onsubmit="sendEmail(); reset(); return false;">
                         <div class="form-group">
                             <label for="first-name">Name <span class="required">*</span></label>
-                            <input type="text" id="first-name" name="first-name" placeholder="Full Name" required>
+                            <input type="text" id="first-name" name="first-name" placeholder="Enter your full name" required>
                             <!-- <input type="text" id="last-name" name="last-name" placeholder="Last Name"> -->
                         </div>
                         <div class="form-group">
                             <label for="email">Email <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" placeholder="Enter your email id" required>
                         </div>
                         <div class="form-group">
                             <label for="contact-number">Contact Number <span class="required">*</span></label>
-                            <input type="tel" id="contact-number" name="contact-number" pattern="[0-9]*" required>
+                            <input type="tel" id="contact-number" name="contact-number" pattern="[0-9]*" placeholder="Enter your mobile number" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Enquiry or Message <span class="required">*</span></label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
                         </div>
                         <button type="submit">Submit</button>
                     </form>
+                    <div id="confirmation-message" style="margin-top: 20px; color: #ff0000; font-size: 16px; display: none;"></div>
+
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Popup Modal for Validation -->
-    <div id="popupModal" class="modal">
+    <!-- <div id="popupModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <p id="popupMessage"></p>
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -436,8 +438,8 @@
         <div class="footer-contact">
             <h4><strong>PRATAP K. KAPOOR</strong></h4>
             <p>Mobile: 9960562507 / 9552005300</p>
-            <p>Email Id: <a href="mailto:kapor.pkk.prtap727@gmail.com">kapor.pkk.prtap727@gmail.com</a></p>
-            <p>Prabhukosh, 13–B, Uday Housing Society,<br>Savedi, Ahmednagar – 414003,<br>Maharashtra</p>
+            <p>Email: <a href="mailto:kapoor.pkk.prtap727@gmail.com">kapoor.pkk.prtap727@gmail.com</a></p>
+            <p>Prabhukosh, 13–B, Uday Housing Society,<br>Savedi, Ahilyanagar – 414003,<br>Maharashtra</p>
         </div>
     </div>
 </section>
@@ -458,22 +460,51 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
         function sendEmail() {
-            let name = document.getElementById("name").value;
+            let name = document.getElementById("first-name").value;
             let email = document.getElementById("email").value;
-            let phone = document.getElementById("phone").value;
+            let phone = document.getElementById("contact-number").value;
             let message = document.getElementById("message").value;
-            let body = "Name: " + name + "<br> Email: " + email + "<br> Phone: " + phone + "<br> Message: " + message;
+            
+            let body = `
+                <h3>New Inquiry</h3>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Phone:</strong> ${phone}</p>
+                <p><strong>Message:</strong><br> ${message}</p>
+            `;
+
             console.log(body);
 
-
             Email.send({
-                SecureToken: "e2d75a42-cd10-49d9-aa27-ecc1fe68587e",
-                To: 'gdsc.acem@gmail.com',
-                From: "gdsc.acem@gmail.com",
-                Subject: "Email us with any questions",
+                SecureToken: "da5feedd-dddb-41a4-877b-c92613d85f21",
+                To: 'pratapkapoor54@gmail.com',
+                From: "pratapkapoor54@gmail.com",
+                Subject: "Inquiry from Website",
                 Body: body,
             }).then(
-                message => alert("message sent Successfully")
+                message => {
+                    // Display confirmation message
+                    let confirmation = document.getElementById("confirmation-message");
+                    confirmation.innerHTML = "Your message has been sent successfully! We will get back to you soon.";
+                    confirmation.style.display = "block";
+                    
+                    // Hide confirmation message after 4 seconds
+                    setTimeout(() => {
+                        confirmation.style.display = "none";
+                    }, 4000);
+                }
+            ).catch(
+                error => {
+                    let confirmation = document.getElementById("confirmation-message");
+                    confirmation.innerHTML = "Oops! Something went wrong. Please try again later.";
+                    confirmation.style.display = "block";
+                    confirmation.style.color = "red";
+                    
+                    // Hide error message after 4 seconds
+                    setTimeout(() => {
+                        confirmation.style.display = "none";
+                    }, 4000);
+                }
             );
         }
     </script>

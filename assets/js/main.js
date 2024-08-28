@@ -309,26 +309,6 @@ function toggleAccordion(accordionId, buttonElement) {
 
 
 
-// Form validation and popup handling
-function validateForm() {
-  var firstName = document.getElementById('first-name').value;
-  var email = document.getElementById('email').value;
-  var contactNumber = document.getElementById('contact-number').value;
-  var message = document.getElementById('message').value;
-
-  if (!firstName || !email || !contactNumber || !message) {
-      showPopup("Please fill in all required fields.");
-      return false;
-  }
-
-  if (!validateEmail(email)) {
-      showPopup("Please enter a valid email address.");
-      return false;
-  }
-
-  showPopup("Thank you for contacting us! We will reach out to you soon.", true);
-  return false; // Prevents actual form submission for demo purposes
-}
 
 function validateEmail(email) {
   var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
