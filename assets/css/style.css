@@ -575,14 +575,12 @@ section {
 
 .WhoWeArePara p {
     font-size: 16px;
-    font-weight: 400px;
     color: #ffffff;
     margin-bottom: 0px;
     max-width: 980px;
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
-    line-height: 55x;
 }
 @media only screen and (max-width: 768px) {
     .WhoWeArePara p {
