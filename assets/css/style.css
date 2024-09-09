@@ -590,6 +590,97 @@ section {
 
 
 
+
+.client {
+    padding: 0;
+}
+
+.client .row {
+    margin-right: calc(-1.5* var(--bs-gutter-x));
+}
+
+.client .icon-box {
+    padding: 20px;
+    color: #5f687b;
+    background: white;
+    border-radius: 20px;
+    transition: 0.3s;
+    height: 100%;
+}
+.client .icon-box-1 {
+    padding: 20px;
+    background: transparent;
+    border-radius: 20px;
+    transition: 0.3s;
+    height: 100%;
+}
+
+.client .icon {
+    margin: 0 0 15px 0;
+    
+}
+
+.client .icon i {
+    color: #ff712b;
+    font-size: 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+
+}
+
+.client .title {
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 25px;
+    text-align: center;
+}
+.client .title-1 {
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 15px;
+    font-size: 36px;
+    text-align: center;
+}
+.client .title a {
+    color: #000000;
+    transition: 0.3s;
+}
+
+.client .icon-box:hover {
+    border-color: #eaecef;
+}
+
+.client .icon-box:hover .title a {
+    color: #ff712b;
+}
+.icon-box img{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+    height: 80px;
+    width: 80px;
+}
+.client .description {
+    line-height: 24px;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+}
+.client .description-1 {
+    line-height: 24px;
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+}
+
+
+
+
+
+
 /* .About {
     padding: 0;
 }
@@ -829,6 +920,7 @@ section {
     border-color: #ff5500;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
+    
 }
 
 .accordion-button.active{
