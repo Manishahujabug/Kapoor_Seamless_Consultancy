@@ -1232,7 +1232,7 @@ blockquote p {
 .footer-logo p {
     font-size: 16px;
     line-height: 1.6;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     text-align: justify;
 }
 
@@ -1338,11 +1338,6 @@ blockquote p {
 }
 
 
-
-
-
-
-/* <SCROLL BAR>*/
 
 
 /* Selection */
