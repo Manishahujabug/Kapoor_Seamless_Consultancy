@@ -495,64 +495,6 @@ h6 {
 }
 
 
-/*--------------------------------------------------------------
-# Sections General
---------------------------------------------------------------*/
-
-section {
-    padding: 0px 0px 0px 0px;
-    overflow: hidden;
-}
-
-.section-bg {
-    background-color: #f9f9fa;
-}
-
-.section-title {
-    text-align: center;
-    padding: 30px 0;
-    position: relative;
-}
-
-.section-title h2 {
-    font-size: 32px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    padding-bottom: 0;
-    color: #5f687b;
-    position: relative;
-    z-index: 2;
-}
-
-.section-title span {
-    position: absolute;
-    top: 30px;
-    color: #f0f1f3;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    font-weight: 700;
-    font-size: 52px;
-    text-transform: uppercase;
-    line-height: 0;
-}
-
-.section-title p {
-    margin-bottom: 0;
-    position: relative;
-    z-index: 2;
-}
-
-@media (max-width: 575px) {
-    .section-title h2 {
-        font-size: 28px;
-        margin-bottom: 15px;
-    }
-    .section-title span {
-        font-size: 38px;
-    }
-}
 
 
 /*--------------------------------------------------------------
@@ -591,219 +533,6 @@ section {
 
 
 
-/*--------------------------------------------------------------
-# Our Clients
---------------------------------------------------------------*/
-
-.client {
-    padding: 0;
-}
-
-.client .row {
-    margin-right: calc(-0.5 * var(--bs-gutter-x));
-}
-
-.client .icon-box {
-    padding: 20px;
-    color: #5f687b;
-    background: white;
-    border-radius: 20px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transition for zoom and shadow */
-    height: 100%;
-    position: relative;
-    overflow: hidden; /* Ensure the tile content stays within bounds */
-}
-
-.client .icon-box-1 {
-    padding: 0px;
-    background: transparent;
-    border-radius: 20px;
-    transition: 0.3s;
-    height: 100%;
-}
-
-.client .icon {
-    margin: 0 0 15px 0;
-}
-
-.client .icon i {
-    color: #ff712b;
-    font-size: 40px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.client .title {
-    font-weight: 600;
-    margin-bottom: 10px;
-    font-size: 18px;
-    text-align: center;
-}
-
-.client .title-1 {
-    font-weight: 600;
-    color: #000000;
-    margin-bottom: 15px;
-    font-size: 36px;
-    text-align: center;
-}
-
-.client .title a {
-    color: #000000;
-    transition: 0.3s;
-}
-
-.client .icon-box:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-}
-
-.client .icon-box:hover .title a {
-    color: #ff712b;
-}
-
-.icon-box img {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    width: 80px;
-}
-
-.client .description {
-    line-height: 24px;
-    font-size: 16px;
-    text-align: center;
-    color: #000000;
-}
-
-.client .description-1 {
-    line-height: 24px;
-    font-size: 14px;
-    text-align: center;
-    color: #000000;
-}
-
-/* Custom column class for 5 columns in a row */
-.col-custom {
-    flex: 0 0 20%; /* Take up 20% of the row (1/5th of the row) */
-    max-width: 20%;
-}
-
-@media (max-width: 1200px) {
-    .col-custom {
-        flex: 0 0 33.333%; /* For medium screens, reduce to 3 columns per row */
-        max-width: 33.333%;
-    }
-}
-
-@media (max-width: 768px) {
-    .col-custom {
-        flex: 0 0 50%; /* For small screens, reduce to 2 columns per row */
-        max-width: 50%;
-    }
-}
-
-@media (max-width: 576px) {
-    .col-custom {
-        flex: 0 0 100%; /* For extra small screens, show 1 column per row */
-        max-width: 100%;
-    }
-}
-
-
-
-
-
-
-
-
-/* .About {
-    padding: 0;
-}
-
-.About .icon-box {
-    padding: 20px;
-    color: #5f687b;
-    background: white;
-    border-radius: 20px;
-    transition: 0.3s;
-    height: 100%;
-}
-.About .icon-box-1 {
-    padding: 20px;
-    background: transparent;
-    border-radius: 20px;
-    transition: 0.3s;
-    height: 100%;
-}
-
-.About .icon {
-    margin: 0 0 15px 0;
-    
-}
-
-.About .icon i {
-    color: #ff712b;
-    font-size: 40px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
-
-}
-
-.About .title {
-    font-weight: 600;
-    margin-bottom: 15px;
-    font-size: 50px;
-    text-align: center;
-}
-.About .title-1 {
-    font-weight: 600;
-    color: #000000;
-    margin-bottom: 15px;
-    font-size: 50px;
-    text-align: Left;
-}
-.About .title a {
-    color: #000000;
-    transition: 0.3s;
-}
-
-.About .icon-box:hover {
-    border-color: #eaecef;
-}
-
-.About .icon-box:hover .title a {
-    color: #ff712b;
-}
-.icon-box img{
-    margin: 0 auto;
-    display: flex;
-    justify-content: center; 
-    align-items: center;      
-    height: 80px;
-    width: 80px;
-}
-.About .description {
-    line-height: 24px;
-    font-size: 16px;
-    text-align: center;
-    color: #000000;
-}
-.About .description-1 {
-    line-height: 24px;
-    font-size: 14px;
-    text-align: justify;
-    color: #000000;
-} */
-
-
-
 
 /* Our Expertise Section Styling */
 
@@ -811,7 +540,7 @@ section {
 .our-expertise .container {
     max-width: auto;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 40px;
 }
 
 .our-expertise h2 {
@@ -913,7 +642,7 @@ section {
 
 /* Key Achievements Section Styling */
 .key-achievements {
-    padding: 60px 0;
+    padding: 40px 0;
     background-color: #F5F5F5;
     text-align: center;
 }
@@ -983,8 +712,6 @@ section {
 
 
 
-
-
 .accordion-content {
     display: none;
     background-color: #ffffff;
@@ -1034,9 +761,128 @@ button.accordion-button {
 }
 
 
+
+/*--------------------------------------------------------------
+# Our Clients
+--------------------------------------------------------------*/
+
+.client {
+    padding: 40px;
+}
+
+.client .row {
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.client .icon-box {
+    padding: 20px;
+    color: #5f687b;
+    background: white;
+    border: 1px solid #ff712b;
+    border-radius: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transition for zoom and shadow */
+    height: 100%;
+    position: relative;
+    overflow: hidden; /* Ensure the tile content stays within bounds */
+   
+    display: flex; /* Use Flexbox for centering */
+    flex-direction: column; /* Align content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Ensure text is centered */
+}
+
+
+.client .title {
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.client .title-1 {
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 15px;
+    font-size: 36px;
+    text-align: center;
+}
+
+.client .title a {
+    color: #000000;
+    transition: 0.3s;
+}
+
+.client .icon-box:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.client .icon-box:hover .title a {
+    color: #ff712b;
+}
+
+.icon-box img {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+}
+
+.client .description {
+    line-height: 24px;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.client .description-1 {
+    line-height: 24px;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+}
+
+/* Custom column class for 6 columns in a row */
+.col-custom {
+    flex: 0 0 16.666%; /* Take up 16.66% of the row (1/6th of the row) */
+    max-width: 16.666%;
+}
+
+@media (max-width: 1200px) {
+    .col-custom {
+        flex: 0 0 33.333%; /* For medium screens, reduce to 3 columns per row */
+        max-width: 33.333%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-custom {
+        flex: 0 0 50%; /* For small screens, reduce to 2 columns per row */
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-custom {
+        flex: 0 0 100%; /* For extra small screens, show 1 column per row */
+        max-width: 100%;
+    }
+} 
+
+
+
+
+
+
+
+
 /* Get In Touch Section Styling */
 .get-in-touch {
-    padding: 0px 0px 60px 20px;
+    padding: 40px;
     text-align: center;
 }
 
@@ -1380,7 +1226,7 @@ blockquote p {
 
 .footer-logo img {
     width: 200px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 .footer-logo p {
